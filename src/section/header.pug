@@ -1,0 +1,24 @@
+header.header
+  .header__wrapper.wrapper
+    a.header__logo(href="/") БД
+    .header__nav    
+      - var navItems = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"];
+      - var navAnchors = ["#hero", "#about", "#skills", "#works", "#reviews", "#contacts"];
+        nav.main-nav.main-nav_vertical-tab
+          ul.main-nav-list
+            each item, index in navItems
+              li.main-nav-list__item
+                a(href=`${navAnchors[index]}`).main-nav-list__link #{item}
+    .header__links
+      - var socials = ['insta', 'vk', 'github'];
+      - var links = ['https://www.instagram.com/', 'https://vk.com/', "https://github.com/barsbarsovich"];
+      ul.social-list
+        each item, index in socials
+          li(class='social-list__item')
+            a(href=`${links[index]}` target="_blank").social-list__link
+              +icon(item, `social-icon  social-icon_${item}`)
+    .header__mob-button
+      button.button-nav
+        span
+        span
+        span

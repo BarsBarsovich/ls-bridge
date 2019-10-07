@@ -1,0 +1,22 @@
+section.main-screen#hero
+  .parallax
+    div(data-speed="0.05").parallax__layer.parallax__layer_1 
+      +image('content/main-screen-1.jpg', 'parallax__image')
+    div(data-speed="0.15").parallax__layer.parallax__layer_2 
+      +image('content/main-screen-2.png', 'parallax__image')
+  .wrapper.main-screen__wrapper
+    .main-screen__text
+      .user-info
+        .user-info__desc Личный сайт веб&nbsp;разработчика
+        h1.user-info__name 
+          span Борис
+          span Дрябин
+    .main-screen__btn  
+      button.scroll-down.js-btn-scroll
+        span.scroll-down__text Скролл
+        +icon('scroll', 'scroll-icon')
+  .main-screen-bg.parallax
+    div(data-speed="0.07").parallax__layer.parallax__layer_3  
+      +image('content/main-screen-3.png', 'parallax__image')
+    div(data-speed="0.1").parallax__layer.parallax__layer_4 
+      +image('content/main-screen-4.png', 'parallax__image')
